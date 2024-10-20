@@ -1,0 +1,163 @@
+type Approval @entity(immutable: true) {
+  id: Bytes!
+  owner: Bytes! # address
+  spender: Bytes! # address
+  value: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type ApproveBurnMints @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  project: Bytes! # address
+  amount: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type ApproveBurnStakes @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  project: Bytes! # address
+  amount: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type CyclePayoutTriggered @entity(immutable: true) {
+  id: Bytes!
+  caller: Bytes! # address
+  cycleNo: BigInt! # uint256
+  reward: BigInt! # uint256
+  burnReward: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type ETHDistributed @entity(immutable: true) {
+  id: Bytes!
+  caller: Bytes! # address
+  amount: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type GlobalDailyUpdateStats @entity(immutable: true) {
+  id: Bytes!
+  day: BigInt! # uint256
+  mintCost: BigInt! # uint256
+  shareRate: BigInt! # uint256
+  mintableTitan: BigInt! # uint256
+  mintPowerBonus: BigInt! # uint256
+  EAABonus: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type MintClaimed @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  tRank: BigInt! # uint256
+  rewardMinted: BigInt! # uint256
+  penalty: BigInt! # uint256
+  mintPenalty: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type MintStarted @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  tRank: BigInt! # uint256
+  gMintpower: BigInt! # uint256
+  userMintInfo_mintPower: Int! # uint8
+  userMintInfo_numOfDays: Int! # uint16
+  userMintInfo_mintableTitan: BigInt! # uint96
+  userMintInfo_mintStartTs: BigInt! # uint48
+  userMintInfo_maturityTs: BigInt! # uint48
+  userMintInfo_mintPowerBonus: BigInt! # uint32
+  userMintInfo_EAABonus: BigInt! # uint32
+  userMintInfo_mintedTitan: BigInt! # uint128
+  userMintInfo_mintCost: BigInt! # uint64
+  userMintInfo_status: Int! # uint8
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type ProtocolFeeRecevied @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  day: BigInt! # uint256
+  amount: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type RewardClaimed @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  reward: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type StakeEnded @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  globalStakeId: BigInt! # uint256
+  titanAmount: BigInt! # uint256
+  penalty: BigInt! # uint256
+  penaltyAmount: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type StakeStarted @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  globalStakeId: BigInt! # uint256
+  numOfDays: BigInt! # uint256
+  userStakeInfo_titanAmount: BigInt! # uint152
+  userStakeInfo_shares: BigInt! # uint128
+  userStakeInfo_numOfDays: Int! # uint16
+  userStakeInfo_stakeStartTs: BigInt! # uint48
+  userStakeInfo_maturityTs: BigInt! # uint48
+  userStakeInfo_status: Int! # uint8
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type TitanBurned @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  project: Bytes! # address
+  burnPoolCycleIndex: BigInt! # uint256
+  amount: BigInt! # uint256
+  titanSource: Int! # uint8
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Transfer @entity(immutable: true) {
+  id: Bytes!
+  from: Bytes! # address
+  to: Bytes! # address
+  value: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

@@ -1,0 +1,65 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: TITANX
+    network: mainnet
+    source:
+      address: "0xF19308F923582A6f7c465e5CE7a9Dc1BEC6665B1"
+      abi: TITANX
+      startBlock: 18447145
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApproveBurnMints
+        - ApproveBurnStakes
+        - CyclePayoutTriggered
+        - ETHDistributed
+        - GlobalDailyUpdateStats
+        - MintClaimed
+        - MintStarted
+        - ProtocolFeeRecevied
+        - RewardClaimed
+        - StakeEnded
+        - StakeStarted
+        - TitanBurned
+        - Transfer
+      abis:
+        - name: TITANX
+          file: ./abis/TITANX.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+        - event: ApproveBurnMints(indexed address,indexed address,indexed uint256)
+          handler: handleApproveBurnMints
+        - event: ApproveBurnStakes(indexed address,indexed address,indexed uint256)
+          handler: handleApproveBurnStakes
+        - event: CyclePayoutTriggered(indexed address,indexed uint256,indexed uint256,uint256)
+          handler: handleCyclePayoutTriggered
+        - event: ETHDistributed(indexed address,indexed uint256)
+          handler: handleETHDistributed
+        - event: GlobalDailyUpdateStats(indexed uint256,indexed uint256,indexed uint256,uint256,uint256,uint256)
+          handler: handleGlobalDailyUpdateStats
+        - event: MintClaimed(indexed address,indexed uint256,uint256,indexed uint256,uint256)
+          handler: handleMintClaimed
+        - event: MintStarted(indexed address,indexed uint256,indexed uint256,(uint8,uint16,uint96,uint48,uint48,uint32,uint32,uint128,uint64,uint8))
+          handler: handleMintStarted
+        - event: ProtocolFeeRecevied(indexed address,indexed uint256,indexed uint256)
+          handler: handleProtocolFeeRecevied
+        - event: RewardClaimed(indexed address,indexed uint256)
+          handler: handleRewardClaimed
+        - event: StakeEnded(indexed address,indexed uint256,uint256,indexed uint256,uint256)
+          handler: handleStakeEnded
+        - event: StakeStarted(indexed address,indexed uint256,uint256,(indexed uint152,uint128,uint16,uint48,uint48,uint8))
+          handler: handleStakeStarted
+        - event: TitanBurned(indexed address,indexed address,indexed uint256,uint256,uint8)
+          handler: handleTitanBurned
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/titanx.ts
