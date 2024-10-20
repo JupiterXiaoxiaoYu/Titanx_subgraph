@@ -3,6 +3,8 @@
 - Titanx Docs: https://docs.titanx.win/titanx
 - Titanx App: https://app.titanx.win/mine
 
+
+## Introduction of Titan X
 The TitanX platform is designed to support the TitanX ecosystem by implementing mechanisms that incentivize users and developers through staking, burning, and unique rewards systems. Here's an overview of its main features:
 
 ### Pumpamentals
@@ -13,17 +15,17 @@ TitanX introduces several core "pumpamentals" aimed at enhancing the token's val
 - **Mining Cost Increase**: Similar to Bitcoin's halving, TitanX increases the mining cost over time, which raises the cost floor and decreases token availability.
 
 ### Staking
-Staking TitanX offers ETH rewards based on the number of shares a user holds in the total pool, with different cycles for payouts that continue indefinitely. Bonuses increase with the length and amount of the stake, enhancing potential rewards【23†source】.
+Staking TitanX offers ETH rewards based on the number of shares a user holds in the total pool, with different cycles for payouts that continue indefinitely. Bonuses increase with the length and amount of the stake, enhancing potential rewards.
 
 ### Proof of Burn 2.0
-This feature allows users and projects to burn TitanX in exchange for various benefits, such as a percentage of the burned tokens returned as cashback, increasing their "Burn Bonus Amplifier," and earning a portion of the ETH from the burn pool. It encourages continuous participation and investment in the ecosystem【22†source】.
+This feature allows users and projects to burn TitanX in exchange for various benefits, such as a percentage of the burned tokens returned as cashback, increasing their "Burn Bonus Amplifier," and earning a portion of the ETH from the burn pool. It encourages continuous participation and investment in the ecosystem.
 
 ### Buy & Burn
-A significant portion (62%) of the ETH used to create virtual miners is directed to the Buy & Burn smart contract. This contract automatically converts ETH to WETH for use in buying and burning TitanX tokens. It simplifies the process for developers who want to integrate buy and burn mechanisms into their projects without needing to develop their own contracts【24†source】.
+A significant portion (62%) of the ETH used to create virtual miners is directed to the Buy & Burn smart contract. This contract automatically converts ETH to WETH for use in buying and burning TitanX tokens. It simplifies the process for developers who want to integrate buy and burn mechanisms into their projects without needing to develop their own contracts.
 
 ---
 
-## Introduction
+## Introduction to the subgraph of Titan X
 The TitanX subgraph is designed for deep analytics on the TitanX token operations on the Ethereum blockchain. This tool tracks detailed events related to token transactions, stake management, minting operations, and fee distributions, offering a granular view of the tokenomics and stakeholder interactions within the TitanX ecosystem.
 
 ## Subgraph Schema
