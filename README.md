@@ -1,7 +1,25 @@
 ﻿# Titanx_subgraph
-Deploy Transaction: https://arbiscan.io/tx/0xf5b63905d2b2d03a9540b8ba4c4b0708e534effc71939c7c4b1608a30916ed75
-Titanx Docs: https://docs.titanx.win/titanx
-Titanx App: https://app.titanx.win/mine
+- Deploy Transaction: https://arbiscan.io/tx/0xf5b63905d2b2d03a9540b8ba4c4b0708e534effc71939c7c4b1608a30916ed75
+- Titanx Docs: https://docs.titanx.win/titanx
+- Titanx App: https://app.titanx.win/mine
+
+The TitanX platform is designed to support the TitanX ecosystem by implementing mechanisms that incentivize users and developers through staking, burning, and unique rewards systems. Here's an overview of its main features:
+
+### Pumpamentals
+TitanX introduces several core "pumpamentals" aimed at enhancing the token's value and demand:
+- **Staking Mechanics**: Users can lock their tokens to earn ETH, similar to bank Certificates of Deposit. The longer the lock period, the higher the yield, reducing market supply and increasing scarcity.
+- **Proof of Burn 2.0**: Developers can use TitanX tokens to create new tokens, permanently removing the used TitanX from circulation.
+- **Buy & Burn**: Continuous buy and burn activities increase scarcity by reducing the number of tokens available over time.
+- **Mining Cost Increase**: Similar to Bitcoin's halving, TitanX increases the mining cost over time, which raises the cost floor and decreases token availability.
+
+### Staking
+Staking TitanX offers ETH rewards based on the number of shares a user holds in the total pool, with different cycles for payouts that continue indefinitely. Bonuses increase with the length and amount of the stake, enhancing potential rewards【23†source】.
+
+### Proof of Burn 2.0
+This feature allows users and projects to burn TitanX in exchange for various benefits, such as a percentage of the burned tokens returned as cashback, increasing their "Burn Bonus Amplifier," and earning a portion of the ETH from the burn pool. It encourages continuous participation and investment in the ecosystem【22†source】.
+
+### Buy & Burn
+A significant portion (62%) of the ETH used to create virtual miners is directed to the Buy & Burn smart contract. This contract automatically converts ETH to WETH for use in buying and burning TitanX tokens. It simplifies the process for developers who want to integrate buy and burn mechanisms into their projects without needing to develop their own contracts【24†source】.
 
 ---
 
