@@ -3,6 +3,9 @@
     "TITANX": {
       "address": "0xF19308F923582A6f7c465e5CE7a9Dc1BEC6665B1",
       "startBlock": 18447145
+    },
+    "BuyAndBurn": {
+      "address": "0x1393ad734EA3c52865b4B541cf049dafd25c23a5"
     }
   }
 }

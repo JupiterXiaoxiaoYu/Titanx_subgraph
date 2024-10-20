@@ -161,3 +161,22 @@ type Transfer @entity(immutable: true) {
   blockTimestamp: BigInt!
   transactionHash: Bytes!
 }
+type BoughtAndBurned @entity(immutable: true) {
+  id: Bytes!
+  weth: BigInt! # uint256
+  titan: BigInt! # uint256
+  caller: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type CollectedFees @entity(immutable: true) {
+  id: Bytes!
+  weth: BigInt! # uint256
+  titan: BigInt! # uint256
+  caller: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

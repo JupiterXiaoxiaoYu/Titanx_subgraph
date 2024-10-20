@@ -44,11 +44,13 @@ dataSources:
           handler: handleCyclePayoutTriggered
         - event: ETHDistributed(indexed address,indexed uint256)
           handler: handleETHDistributed
-        - event: GlobalDailyUpdateStats(indexed uint256,indexed uint256,indexed uint256,uint256,uint256,uint256)
+        - event: GlobalDailyUpdateStats(indexed uint256,indexed uint256,indexed
+            uint256,uint256,uint256,uint256)
           handler: handleGlobalDailyUpdateStats
         - event: MintClaimed(indexed address,indexed uint256,uint256,indexed uint256,uint256)
           handler: handleMintClaimed
-        - event: MintStarted(indexed address,indexed uint256,indexed uint256,(uint8,uint16,uint96,uint48,uint48,uint32,uint32,uint128,uint64,uint8))
+        - event: MintStarted(indexed address,indexed uint256,indexed
+            uint256,(uint8,uint16,uint96,uint48,uint48,uint32,uint32,uint128,uint64,uint8))
           handler: handleMintStarted
         - event: ProtocolFeeRecevied(indexed address,indexed uint256,indexed uint256)
           handler: handleProtocolFeeRecevied
@@ -56,10 +58,34 @@ dataSources:
           handler: handleRewardClaimed
         - event: StakeEnded(indexed address,indexed uint256,uint256,indexed uint256,uint256)
           handler: handleStakeEnded
-        - event: StakeStarted(indexed address,indexed uint256,uint256,(indexed uint152,uint128,uint16,uint48,uint48,uint8))
+        - event: StakeStarted(indexed address,indexed uint256,uint256,(indexed
+            uint152,uint128,uint16,uint48,uint48,uint8))
           handler: handleStakeStarted
         - event: TitanBurned(indexed address,indexed address,indexed uint256,uint256,uint8)
           handler: handleTitanBurned
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
       file: ./src/titanx.ts
+  - kind: ethereum
+    name: BuyAndBurn
+    network: mainnet
+    source:
+      address: "0x1393ad734EA3c52865b4B541cf049dafd25c23a5"
+      abi: BuyAndBurn
+      startBlock: 18447112
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - BoughtAndBurned
+        - CollectedFees
+      abis:
+        - name: BuyAndBurn
+          file: ./abis/BuyAndBurn.json
+      eventHandlers:
+        - event: BoughtAndBurned(indexed uint256,indexed uint256,indexed address)
+          handler: handleBoughtAndBurned
+        - event: CollectedFees(indexed uint256,indexed uint256,indexed address)
+          handler: handleCollectedFees
+      file: ./src/buy-and-burn.ts
