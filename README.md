@@ -180,13 +180,12 @@ The TitanX subgraph is designed for deep analytics on the TitanX token operation
 
 ### Event Handlers
 
-Each entity has a corresponding event handler that processes blockchain events to update the subgraph's data. These handlers extract and store the data in their respective entities efficiently.
+Each entity has a corresponding event handler that processes blockchain events to update the subgraph's data. These handlers extract and store the data in their respective entities efficiently. For instance:
 
 - **handleBoughtAndBurned:** Updates `BoughtAndBurned` entities.
 - **handleCollectedFees:** Updates `CollectedFees` entities.
 - **handleApproval:** Updates `Approval` entities.
 
-_(Include all other event handlers, ensuring each description aligns with the respective TypeScript function.)_
 
 ### Example Queries
 
